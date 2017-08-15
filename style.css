@@ -7,3 +7,9 @@ main {
 footer {
 	margin-top: 20px;
 }
+
+.thumb {
+	background: #7F7F7F;
+	border: solid white 5px;
+	padding: 20px;
+}
