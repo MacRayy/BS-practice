@@ -1,20 +1,28 @@
+'use strict'
+
 const app = angular.module('app', []);
 
 app.controller('appController', ['$scope', function($scope) {
-	$scope.message = 'hey';
-
 	$scope.dogs = [
 		{
 			name: 'Conney',
-			breed: 'border collie'
+			breed: 'border collie',
+			hunger: true
+		},
+		{
+			name: 'Disco',
+			breed: 'collie',
+			hunger: true
 		},
 		{
 			name: 'Lujza',
-			breed: 'mix breed'
+			breed: 'mix breed',
+			hunger: false
 		},
 		{
 			name: 'Berta',
-			breed: 'fox terrier'
+			breed: 'fox terrier',
+			hunger: true
 		}
 	];
 }]);
