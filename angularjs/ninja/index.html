@@ -13,17 +13,24 @@
 		<div class="content">
 			<div ng-controller="appController">
 
-				<button ng-click="order = 'name">Order by name</button>
-				<button ng-click="order = 'breed">Order by breed</button>
+				<button ng-click="order = 'name'">Order by name</button>
+				<button ng-click="order = 'breed'">Order by breed</button>
 
 				<input type="text" name="" ng-model="search" placeholder="search dogs">
 
 				<ul>
 					<li ng-repeat="dog in dogs | orderBy: order | filter: search" ng-show="dog.hunger">
 						<h3>{{dog.name}}</h3>
-						<span>{{dog.breed}}</span>
+						<div class="remove" ng-click="removeDog(dog)">X</div>
+						<span class="breed">{{dog.breed}}</span>
 					</li>
 				</ul>
+
+				<form ng-submit="addDog()">
+					<input type="text" placeholder="name" ng-model="newDog.name">
+					<input type="text" placeholder="breed" ng-model="newDog.breed">
+					<input type="submit" value="Add new dog">
+				</form>
 			</div>
 		</div>
 	</body>
