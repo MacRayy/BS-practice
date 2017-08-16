@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="app">
 	<head>
 		<title>AngularJS</title>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="ninja/app/lib/angular.min.js"></script>
+		<script type="text/javascript" src="app/lib/angular.min.js"></script>
+		<script type="text/javascript" src="app/app.js"></script>
 	</head>
 	<body>
-
+		<div ng-controller="appController">
+			<p>{{message}}</p>
+		</div>
 	</body>
 </html>
