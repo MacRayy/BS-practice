@@ -23,31 +23,36 @@ const app = angular.module('app', [])
 			name: 'Conney',
 			breed: 'border collie',
 			color: 'black',
-			hunger: true
+			hunger: true,
+			pic: 'assets/dog.png'
 		},
 		{
 			name: 'Disco',
 			breed: 'collie',
 			color: 'black',
-			hunger: true
+			hunger: true,
+			pic: 'assets/dog.png'
 		},
 		{
 			name: 'Lujza',
 			breed: 'mix breed',
 			color: 'black',
-			hunger: false
+			hunger: false,
+			pic: 'assets/dog.png'
 		},
 		{
 			name: 'Berta',
 			breed: 'fox terrier',
 			color: 'white',
-			hunger: true
+			hunger: true,
+			pic: 'assets/dog.png'
 		},
 		{
 			name: 'Bomper',
 			breed: 'mix breed',
 			color: 'brown',
-			hunger: true
+			hunger: true,
+			pic: 'assets/dog.png'
 		}
 	];
 }]);
