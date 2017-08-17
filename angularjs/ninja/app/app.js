@@ -52,6 +52,10 @@ app.controller('appController', ['$scope', '$http', function ($scope, $http) {
 		$scope.newDog.breed = '';
 	};
 
+	$scope.removeAll = () => {
+		$scope.dogs = [];
+	};
+
 	// $http.get('data/dogs.json').then((response) => {
 	// 		$scope.dogs = response.data;
 	// });

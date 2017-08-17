@@ -152,5 +152,10 @@ main.ng-enter.ng-enter-active {
 #dog-list li.ng-leave.ng-leave-active {
   opacity: 0;
   transform: translateX(-100%);
-  transition:.2s ease;
+  transition: .2s ease;
+}
+
+#dog-list li.ng-leave-stagger {
+  transition-delay: .2s;
+  transition-duration: 0;
 }
