@@ -1,7 +1,22 @@
 'use strict'
 
-const app = angular.module('app', [])
-.controller('appController', ['$scope', ($scope) => {
+const app = angular.module('app', ['ngRoute']);
+
+app.config(['$routeProvider', function ($routeProvider) {
+	$routeProvider
+		.when('/home', {
+			templateUrl: 'view/home.html'
+		})
+		.when('/directory', {
+			templateUrl: 'view/directory.html',
+			controller: 'appController'
+		})
+		.otherwise({
+			redirectTo: '/home'
+		});
+}]);
+
+app.controller('appController', ['$scope', function ($scope) {
 
 	$scope.removeDog = (dog) => {
 		let removedDog = $scope.dogs.indexOf(dog);

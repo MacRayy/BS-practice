@@ -5,34 +5,11 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="assets/style.css">
 		<script type="text/javascript" src="app/lib/angular.min.js"></script>
+		<script type="text/javascript" src="app/lib/angular-route.min.js"></script>
 		<script type="text/javascript" src="app/app.js"></script>
 	</head>
 	<body>
 		<header ng-include="'assets/header.html'"></header>
-
-		<div class="content">
-			<div ng-controller="appController">
-
-				<button ng-click="order = 'name'">Order by name</button>
-				<button ng-click="order = 'breed'">Order by breed</button>
-
-				<input type="text" name="" ng-model="search" placeholder="search dogs">
-
-				<ul>
-					<li ng-repeat="dog in dogs | orderBy: order | filter: search" ng-show="dog.hunger">
-						<img ng-src="{{dog.pic}}">
-						<h3>{{dog.name}}</h3>
-						<div class="remove" ng-click="removeDog(dog)">X</div>
-						<span class="breed">{{dog.breed}}</span>
-					</li>
-				</ul>
-
-				<form ng-submit="addDog()">
-					<input type="text" placeholder="name" ng-model="newDog.name">
-					<input type="text" placeholder="breed" ng-model="newDog.breed">
-					<input type="submit" value="Add new dog">
-				</form>
-			</div>
-		</div>
+		<main ng-view></main>
 	</body>
 </html>
