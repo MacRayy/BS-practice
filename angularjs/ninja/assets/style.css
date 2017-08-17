@@ -159,3 +159,15 @@ main.ng-enter.ng-enter-active {
   transition-delay: .2s;
   transition-duration: 0;
 }
+
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng -touched {
+  border: 1px solid tomato;
+}
+
+input.ng-valid, textarea.ng-valid {
+  border: 1px solid #20d1ac;
+}
+
+input[disabled="disabled"] {
+  opacity: .4;
+}
