@@ -9,7 +9,12 @@ app.config(['$routeProvider', function ($routeProvider) {
 			controller: 'appController'
 		})
 		.when('/contact', {
-			templateUrl: 'view/contact.html'
+			templateUrl: 'view/contact.html',
+			controller: 'ContactController'
+		})
+		.when('/contact-success', {
+			templateUrl: 'view/contact-success.html',
+			controller: 'ContactController'
 		})
 		.when('/directory', {
 			templateUrl: 'view/directory.html',
@@ -69,4 +74,8 @@ app.controller('appController', ['$scope', '$http', function ($scope, $http) {
 		}).then((response) => {
 			$scope.dogs = response.data;
 		});
+}]);
+
+app.controller('ContactController', ['$scope', '$location', function ($scope, $location) {
+	$scope.sendMessage = () => $location.path('/contact-success');
 }]);
