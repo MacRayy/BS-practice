@@ -2,7 +2,9 @@
 
 const app = angular.module('app', ['ngRoute', 'ngAnimate']);
 
-app.config(['$routeProvider', function ($routeProvider) {
+app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+	$locationProvider.html5Mode(true);
+
 	$routeProvider
 		.when('/home', {
 			templateUrl: 'view/home.html',
@@ -36,7 +38,7 @@ app.directive('randomDog', [function (){
 		transclude: true,
 		replace: true,
 		controller: function ($scope) {
-			$scope.random = Math.floor(Math.random() * 4)
+			$scope.random = Math.floor(Math.random() * 4);
 		}
 	};
 }]);
