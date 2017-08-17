@@ -12,6 +12,8 @@ const server = () => {
 
 	app.use('/view', express.static('view'));
 
+	app.use('/data', express.static('data'));
+
   app.get('/', (req, res) => {
 		res.sendFile(__dirname + '/index.html');
   });

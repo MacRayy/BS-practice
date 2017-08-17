@@ -16,7 +16,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 		});
 }]);
 
-app.controller('appController', ['$scope', function ($scope) {
+app.controller('appController', ['$scope', '$http', function ($scope, $http) {
 
 	$scope.removeDog = (dog) => {
 		let removedDog = $scope.dogs.indexOf(dog);
@@ -27,47 +27,15 @@ app.controller('appController', ['$scope', function ($scope) {
 		$scope.dogs.push({
 			name: $scope.newDog.name,
 			breed: $scope.newDog.breed,
-			hunger: true
+			hunger: true,
+			pic: "assets/dog.png"
+
 		});
 		$scope.newDog.name = '';
 		$scope.newDog.breed = '';
 	};
 
-	$scope.dogs = [
-		{
-			name: 'Conney',
-			breed: 'border collie',
-			color: 'black',
-			hunger: true,
-			pic: 'assets/dog.png'
-		},
-		{
-			name: 'Disco',
-			breed: 'collie',
-			color: 'black',
-			hunger: true,
-			pic: 'assets/dog.png'
-		},
-		{
-			name: 'Lujza',
-			breed: 'mix breed',
-			color: 'black',
-			hunger: false,
-			pic: 'assets/dog.png'
-		},
-		{
-			name: 'Berta',
-			breed: 'fox terrier',
-			color: 'white',
-			hunger: true,
-			pic: 'assets/dog.png'
-		},
-		{
-			name: 'Bomper',
-			breed: 'mix breed',
-			color: 'brown',
-			hunger: true,
-			pic: 'assets/dog.png'
-		}
-	];
+	$http.get('data/dogs.json').then((response) => {
+			$scope.dogs = response.data;
+	});
 }]);
