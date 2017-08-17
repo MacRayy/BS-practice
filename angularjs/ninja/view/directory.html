@@ -4,7 +4,7 @@
 
 	<input type="text" name="" ng-model="search" placeholder="search dogs">
 
-	<ul>
+	<ul id="dog-list">
 		<li ng-repeat="dog in dogs | orderBy: order | filter: search" ng-show="dog.hunger">
 			<img ng-src="{{dog.pic}}">
 			<h3>{{dog.name}}</h3>

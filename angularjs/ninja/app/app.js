@@ -1,11 +1,12 @@
 'use strict'
 
-const app = angular.module('app', ['ngRoute']);
+const app = angular.module('app', ['ngRoute', 'ngAnimate']);
 
 app.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider
 		.when('/home', {
-			templateUrl: 'view/home.html'
+			templateUrl: 'view/home.html',
+			controller: 'appController'
 		})
 		.when('/directory', {
 			templateUrl: 'view/directory.html',
@@ -14,6 +15,22 @@ app.config(['$routeProvider', function ($routeProvider) {
 		.otherwise({
 			redirectTo: '/home'
 		});
+}]);
+
+app.directive('randomDog', [function (){
+	return {
+		restrict: 'E',
+		scope: {
+			dogs: '=',
+			title: '='
+		},
+		templateUrl: 'view/random.html',
+		transclude: true,
+		replace: true,
+		controller: function ($scope) {
+			$scope.random = Math.floor(Math.random() * 4)
+		}
+	};
 }]);
 
 app.controller('appController', ['$scope', '$http', function ($scope, $http) {
@@ -35,7 +52,14 @@ app.controller('appController', ['$scope', '$http', function ($scope, $http) {
 		$scope.newDog.breed = '';
 	};
 
-	$http.get('data/dogs.json').then((response) => {
+	// $http.get('data/dogs.json').then((response) => {
+	// 		$scope.dogs = response.data;
+	// });
+
+	$http ({
+		method: 'GET',
+  	url: '/data'
+		}).then((response) => {
 			$scope.dogs = response.data;
-	});
+		});
 }]);
