@@ -62,7 +62,7 @@ app.controller('appController', ['$scope', '$http', function ($scope, $http) {
 		$scope.newDog.breed = '';
 	};
 
-	$scope.removeAll = () => {
+	$scope.removeAll = () = > {
 		$scope.dogs = [];
 	};
 
