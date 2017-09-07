@@ -1,11 +1,9 @@
 const likes = (names) => {
-	let likeMsg = ''
-	if (names = []) {
-		likeMsg = 'no one likes this'
-	} else {
-
+	let likeMsg = 'no one likes this'
+	if (typeof names[0] === 'string') {
+		likeMsg = names[0] + ' likes this'
 	}
 	return likeMsg
 }
 
-console.log(likes(["Peter"]))
+console.log(likes(['peter']))
