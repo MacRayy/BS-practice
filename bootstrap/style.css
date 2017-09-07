@@ -1,0 +1,15 @@
+main {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 10px;
+}
+
+footer {
+	margin-top: 20px;
+}
+
+.thumb {
+	background: #7f7f7f;
+	border: solid #ffffff 5px;
+	padding: 20px;
+}
