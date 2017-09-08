@@ -9,7 +9,22 @@
 // });
 
 function humanReadable(seconds) {
-	let time = 0
+	let time = ''
+	let hh = Math.floor(seconds / 3600).toString()
+	const hhModulo = seconds % 3600
+	let mm = Math.floor(hhModulo / 60).toString()
+	const mmModulo = hhModulo % 60
+	let ss = Math.floor(mmModulo % 60).toString()
+	if (hh.length !== 2) {
+		hh = '0' + hh
+	}
+	if (mm.length !== 2) {
+		mm = '0' + mm
+	}
+	if (ss.length !== 2) {
+		ss = '0' + ss
+	}
+	time = hh + ':' + mm + ':' + ss
 	return time
 }
 
