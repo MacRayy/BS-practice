@@ -1,3 +1,5 @@
+'use stict'
+
 const likes = (names) => {
 	let likeMsg = 'no one likes this'
 	if (typeof names[0] === 'string') {

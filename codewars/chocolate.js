@@ -1,3 +1,5 @@
+'use stict'
+
 const breakChocolate = function(n, m) {
  if (typeof n !== 'number' || typeof m !== 'number') {
    return 0

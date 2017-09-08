@@ -1,3 +1,5 @@
+'use stict'
+
 function persistence(num) {
   let steps = 1
   let strNumbers = num.toString().split('')
