@@ -1,14 +1,26 @@
 .container {
 	display: grid;
+	grid-template-areas:
+		"header header header"
+		"content . ."
+		"content . ."
+		"content . ."
+		"content . ."
+		"content . .";
 	grid-template-columns: 2fr 1fr 1fr;
 	grid-template-rows: 100px 1fr 1fr 1fr 1fr 1fr;
 	height: 750px;
 }
 
 .header {
-	background: gray;
-	grid-column: 1 / 4 span;
-	grid-row: 1 / 2;
+	background: #F5F5F5;
+	grid-area: header;
+	/*grid-column: 1 / 4 span;*/
+	/*grid-row: 1 / 2;*/
+}
+
+.content {
+	grid-area: content;
 }
 
 
