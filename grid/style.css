@@ -9,7 +9,7 @@
 		"content navbar footer";
 	grid-template-columns: 2fr 1fr 1fr;
 	grid-template-rows: 100px .5fr .5fr 1fr 1fr 1fr;
-	height: 750px;
+	height: 100vh;
 }
 
 .header {
