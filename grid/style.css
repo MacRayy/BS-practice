@@ -2,13 +2,13 @@
 	display: grid;
 	grid-template-areas:
 		"header header header"
-		"content . ."
-		"content . ."
-		"content . ."
-		"content . ."
-		"content . .";
+		"content sidebar sidebar"
+		"content sidebar sidebar"
+		"content navbar footer"
+		"content navbar footer"
+		"content navbar footer";
 	grid-template-columns: 2fr 1fr 1fr;
-	grid-template-rows: 100px 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 100px .5fr .5fr 1fr 1fr 1fr;
 	height: 750px;
 }
 
@@ -21,6 +21,20 @@
 
 .content {
 	grid-area: content;
+	padding: 20px;
 }
 
+.sidebar {
+	background: tomato;
+	grid-area: sidebar;
+}
 
+.navbar {
+	background: gray;
+	grid-area: navbar;
+}
+
+.footer {
+	background: skyblue;
+	grid-area: footer;
+}
