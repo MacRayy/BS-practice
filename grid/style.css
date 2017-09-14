@@ -1,13 +1,14 @@
 .container {
 	display: grid;
-	grid-template-columns: 50px 50px 100px 50px 50px;
-	grid-template-rows: 100px 100px 100px;
-	height: 50px;
-	width: 50px;
+	grid-template-columns: 2fr 1fr 1fr;
+	grid-template-rows: 100px 1fr 1fr 1fr 1fr 1fr;
+	height: 750px;
 }
 
-.box1 {
-	background: tomato;
-	grid-column: 2/3 span;
-	grid-row: 1/3;
+.header {
+	background: gray;
+	grid-column: 1 / 4 span;
+	grid-row: 1 / 2;
 }
+
+
