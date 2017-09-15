@@ -13,7 +13,7 @@
     .container {
       grid-template-areas: 'icon' 'header' 'content' 'navbar' 'footer';
       grid-template-columns: 1fr;
-      grid-template-rows: 1.5fr 80px 5fr 1fr .5fr;
+      grid-template-rows: .5fr 80px 5fr 1fr .5fr;
       height: 100%; } }
 
 .header {
@@ -42,6 +42,9 @@
     background-position: center;
     width: 15vw;
     height: 15vh; }
+    @media only screen and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+      .icon div {
+        margin: 10px; } }
 
 .navbar {
   background: gray;
