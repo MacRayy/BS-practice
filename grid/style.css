@@ -78,6 +78,16 @@
 .navbar {
   background: gray;
   grid-area: navbar; }
+  .navbar a {
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid ghostwhite;
+    text-decoration: none;
+    color: ghostwhite; }
 
 .footer {
   background: skyblue;
