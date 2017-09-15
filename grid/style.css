@@ -30,14 +30,28 @@
   -ms-flex-align: center;
   align-items: center; }
   .header h1 {
-    font-size: 30px; }
+    font-size: 34px; }
     @media screen and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
       .header h1 {
         font-size: 20px; } }
 
 .content {
   grid-area: content;
-  padding: 20px; }
+  padding: 24px; }
+  .content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .content p {
+    line-height: 20px;
+    margin-bottom: 5px; }
 
 .icon {
   background: tomato;

@@ -46,7 +46,7 @@
   align-items: center;
 
 	h1 {
-		font-size: 30px;
+		font-size: 34px;
 
 		@media screen
 		and (max-width: 667px)
@@ -58,7 +58,19 @@
 
 .content {
 	grid-area: content;
-	padding: 20px;
+	padding: 24px;
+
+	h2 {
+		font-size: 20px;
+		margin-bottom: 10px;
+		display: flex;
+    justify-content: center;
+	}
+
+	p {
+		line-height: 20px;
+		margin-bottom: 5px;
+	}
 }
 
 .icon {
