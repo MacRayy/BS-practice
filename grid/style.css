@@ -1,4 +1,5 @@
 .container {
+  font-family: sans-serif;
   display: grid;
   grid-template-areas: 'header header header' 'content icon icon' 'content icon icon' 'content navbar footer' 'content navbar footer' 'content navbar footer';
   grid-template-columns: 2fr 1fr 1fr;
@@ -18,7 +19,21 @@
 
 .header {
   background: #F5F5F5;
-  grid-area: header; }
+  grid-area: header;
+  display: grid;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .header h1 {
+    font-size: 30px; }
+    @media screen and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+      .header h1 {
+        font-size: 20px; } }
 
 .content {
   grid-area: content;

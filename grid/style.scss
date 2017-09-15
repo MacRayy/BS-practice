@@ -1,4 +1,5 @@
 .container {
+	font-family: sans-serif;
 	display: grid;
 	grid-template-areas:
 		'header header header'
@@ -40,6 +41,19 @@
 .header {
 	background: #F5F5F5;
 	grid-area: header;
+	display: grid;
+	justify-content: center;
+  align-items: center;
+
+	h1 {
+		font-size: 30px;
+
+		@media screen
+		and (max-width: 667px)
+		and (-webkit-min-device-pixel-ratio: 2) {
+			font-size: 20px;
+		}
+	}
 }
 
 .content {
