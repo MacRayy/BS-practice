@@ -105,8 +105,20 @@
 .navbar {
 	background: gray;
 	grid-area: navbar;
+	display: grid;
+	align-content: start;
+
+	@media only screen
+		and (max-width: 667px)
+  	and (orientation: landscape)
+  	and (-webkit-min-device-pixel-ratio: 2) {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+  	}
+
 
 	a {
+    align-content: center;
 		display: grid;
     justify-content: center;
     padding: 20px;
@@ -123,11 +135,11 @@
 	h3 {
 		font-size: 16px;
 		font-weight: bold;
-		padding: 15px 6px 6px 6px;
+		padding: 15px 6px 6px;
 	}
 
 	ul {
 		font-size: 14px;
-		padding: 0px 15px;
+		padding: 0px 15px 10px;
 	}
 }
