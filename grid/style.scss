@@ -87,6 +87,13 @@
 		width: 15vw;
 		height: 15vh;
 
+		@media screen
+		and (max-width: 667px)
+		and (-webkit-min-device-pixel-ratio: 2) {
+			width: 20vw;
+			height: 20vh;
+		}
+
 		@media only screen
   	and (orientation: landscape)
   	and (-webkit-min-device-pixel-ratio: 2) {
@@ -112,4 +119,15 @@
 .footer {
 	background: skyblue;
 	grid-area: footer;
+
+	h3 {
+		font-size: 16px;
+		font-weight: bold;
+		padding: 15px 6px 6px 6px;
+	}
+
+	ul {
+		font-size: 14px;
+		padding: 0px 15px;
+	}
 }
